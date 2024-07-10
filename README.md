@@ -80,6 +80,13 @@ module "mydb" {
 }
 ```
 
+## Get user passwords
+
+```bash
+aws ssm get-parameter --name /${env}/db_user_credentials --with-decryption --output json | jq -r '.Parameter.Value' | jq .
+```
+
+
 ## Requirements
 
 | Name | Version |
