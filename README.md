@@ -4,6 +4,8 @@
 
 This module creates read_only_role and assign users to it. It also generates random passwords for the read_only users and stores them in AWS SSM Parameter Store.
 
+The parameter store value for DbConnectionString should have format `Host=mydb-db.cvfl6olfhg6b.eu-west-1.rds.amazonaws.com;Port=5432;Database=mydb;Username=appuser;Password=apppassword`
+
 ## Usage
 
 ```tf
